@@ -12,7 +12,8 @@ The text-driven condition module embeds the organ names, serving as the conditio
 
 ### 3. Regression Results for Quality Sentinel
 
-![ScatterPlot](./figs/scatter_plot.png)
+<img src="./figs/scatter_plot.png" width = "500" height = "300" alt="The predicted DSC vs GT DSC" align=center />
+
 
 
 
