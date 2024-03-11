@@ -8,9 +8,11 @@ The text-driven condition module embeds the organ names, serving as the conditio
 
 ### 2. Framework for Quality Sentinel
 
-![Framework](./figs/metaUSCL.png)
+![Framework](./figs/framework.png)
 
+### 3. Regression Results for Quality Sentinel
 
+![ScatterPlot](./figs/scatter_plot.png)
 
 
 
