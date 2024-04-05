@@ -9,7 +9,7 @@ import torch
 import matplotlib.pyplot as plt
 import torchvision.transforms as transforms
 import pandas as pd
-from model import CCQN
+from model import QualitySentinel
 
 from dataset import Clip_Rescale, crop_slices
 
@@ -93,7 +93,7 @@ class_map = {  # from totalsegmentator => DAP Atlas embedding
  'spleen': 26,
  'stomach': 7,
  'trachea': 126,
- 'urinary_bladder': 19,  # DAP没有膀胱？？用前列腺代替
+ 'urinary_bladder': 19,
  'vertebrae_C1': 43,
  'vertebrae_C2': 44,
  'vertebrae_C3': 45,
@@ -208,7 +208,6 @@ if __name__ == "__main__":
     data_dir = "Totalsegmentator_dataset_path/"
     output_csv = "inference_results_totalseg.csv"
     
-    # 数据处理
     transform_ct = transforms.Compose([
         Clip_Rescale(min_val=-200, max_val=200),
         transforms.ToPILImage(),
@@ -225,7 +224,7 @@ if __name__ == "__main__":
     ])
     
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    model = CCQN(hidden_dim=50, backbone=model_name, embedding='text_embedding')
+    model = QualitySentinel(hidden_dim=50, backbone=model_name, embedding='text_embedding')
     model.load_state_dict(torch.load(model_path))
     model.to(device)
     model.eval()
@@ -236,7 +235,7 @@ if __name__ == "__main__":
     # initialize csv file
     if not os.path.exists(output_csv):
         results = {"CT_Sample": [sample for sample in ct_samples]}
-        for i in range(104):  # 104个类别，作为后续的列
+        for i in range(104):  # 104 classes
             results[_classes[i]] = [np.nan for _ in ct_samples]
         df = pd.DataFrame(results)
         df.to_csv(output_csv, index=False)
