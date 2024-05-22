@@ -205,7 +205,7 @@ if __name__ == "__main__":
     visualize_seg_pred = False
     model_name = 'resnet50'
     model_path = "model.pth"
-    data_dir = "Totalsegmentator_dataset_path/"
+    data_dir = "./Totalsegmentator_dataset"
     output_csv = "inference_results_totalseg.csv"
     
     transform_ct = transforms.Compose([
