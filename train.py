@@ -69,7 +69,7 @@ def optimal_pair_ranking_loss(predictions, targets, embeddings):
 def main():
     # Hyperparameters
     model_name = 'resnet50'
-    train_samples = 10
+    train_samples = 40
     epochs = 30
     batch_size = 128
     num_workers = 8
@@ -77,9 +77,9 @@ def main():
     weight_decay = 1e-4
     info_interval = 1
     eval_interval = 1
-    TRAIN_DATA_PATH = 'datapath/train'
-    VALID_DATA_PATH = 'datapath/val'
-    MODEL_SAVE_PATH = 'model.pth'
+    TRAIN_DATA_PATH = 'Quality_Sentinel_data_50samples/train'
+    VALID_DATA_PATH = 'Quality_Sentinel_data_50samples/val'
+    MODEL_SAVE_PATH = 'best_resnet50_model_40_samples.pth'
 
     # Set device
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
