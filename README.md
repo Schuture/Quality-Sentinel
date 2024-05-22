@@ -73,6 +73,7 @@ model.load_state_dict(torch.load("best_resnet50_model_40_samples.pth"))
 model.to(device)
 model.eval()
 
+# ct_data shoule be a [D,H,W] 3D volume, mask_this_class should be the same size with binary values
 ct_slice, pred_mask_slice = crop_slices(
     [ct_data[slice_idx, :, :], mask_this_class[slice_idx, :, :]],
     mask_this_class[slice_idx, :, :]
