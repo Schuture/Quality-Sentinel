@@ -22,6 +22,7 @@ Both the training and testing data are drawn from the DAP Atlas dataset featurin
 ### 3. Quick Start
 
 #### 3.1 Train the model
+Download the resampled high-quality dataset, and run
 ```
 python train.py
 ```
@@ -33,7 +34,7 @@ python inference_TotalSegmentator.py
 
 #### 3.3 Code for inference on a single 2D image-label pair
 
-First download label embedding ([Google Drive](https://drive.google.com/file/d/1re11nHwnBM8Cc_sE4IWD9FgIieggOFoT/view?usp=sharing)) and model checkpoint ([Google Drive](https://drive.google.com/file/d/1-iDgjQB8nWtC-nEVLVmz3JbgkxfBF8eH/view?usp=sharing)). And then follow the code below to do inference. The correspondence between \[_class\] and text embedding is in the [DAP_Atlas_label_name.csv](./DAP_Atlas_label_name.csv).
+First download label embedding (label_embedding.pkl) and model checkpoint ([Google Drive](https://drive.google.com/file/d/1-iDgjQB8nWtC-nEVLVmz3JbgkxfBF8eH/view?usp=sharing)). And then follow the code below to do inference. The correspondence between \[_class\] and text embedding is in the [DAP_Atlas_label_name.csv](./DAP_Atlas_label_name.csv).
 
 ```
 import torchvision.transforms as transforms
