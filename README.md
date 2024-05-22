@@ -108,7 +108,11 @@ predicted_dice = model(image_tensor, embedding_tensor)
 
 <img src="./figs/semi-supervised_learning.png" width = "800" height = "160" alt="Semi-Supervised Learning" align=center />
 
+### 5. Environment
 
+The code is developed with Intel Xeon Gold 5218R CPU@2.10GHz and 8 Nvidia Quadro RTX 8000 GPUs.
+
+The install script requirements.txt has been tested on an Ubuntu 20.04 system.
 
 
 
