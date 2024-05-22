@@ -21,20 +21,29 @@ Both the training and testing data are drawn from the DAP Atlas dataset featurin
 
 ### 3. Quick Start
 
+The Quality Sentinel dataset and the trained model are shared in ([Google Drive](https://drive.google.com/drive/folders/1bMDSVSDB3Qv-6IhMaFloVdXZ52QP2V9X?usp=sharing)). After downloading the zipped dataset, unzip it to this directory directly.
+
 #### 3.1 Train the model
-Download the resampled high-quality dataset, and run
+
+Run
+
 ```
 python train.py
 ```
 
+and it would read the data from ./Quality_Sentinel_data_50samples and save the model as best_resnet50_model_40_samples.pth.
+
 #### 3.2 Inference on the TotalSegmentator dataset
+
+Download TotalSegmentatorV1.0 dataset from [Zenodo](https://zenodo.org/records/6802614). Unzip the Totalsegmentator_dataset.zip to this directory directly, and run
+
 ```
 python inference_TotalSegmentator.py
 ```
 
 #### 3.3 Code for inference on a single 2D image-label pair
 
-First download label embedding (label_embedding.pkl) and model checkpoint ([Google Drive](https://drive.google.com/file/d/1-iDgjQB8nWtC-nEVLVmz3JbgkxfBF8eH/view?usp=sharing)). And then follow the code below to do inference. The correspondence between \[_class\] and text embedding is in the [DAP_Atlas_label_name.csv](./DAP_Atlas_label_name.csv).
+Follow the code below to do inference. The correspondence between \[_class\] and text embedding is in the [DAP_Atlas_label_name.csv](./DAP_Atlas_label_name.csv).
 
 ```
 import torchvision.transforms as transforms
