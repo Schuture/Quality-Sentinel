@@ -2,8 +2,10 @@
 This is the repository of Quality Sentinel, a label (mask) quality evaluation tool for medical image segmentation, implemented with PyTorch.
 
 ### 1. Brief Introduction of this method
-Model input: an image-label pair. The image is a 2D CT slice, the label is a binary mask.
-Model output: estimates DSC of the mask to ground truths.
+
+**Model input**: an image-label pair. The image is a 2D CT slice, the label is a binary mask.
+
+**Model output**: estimates DSC of the mask to ground truths.
 
 Two technical novelties:
 
