@@ -109,7 +109,7 @@ predicted_dice = model(image_tensor, embedding_tensor)
 
 (3) Semi-supervised learning results of label quality ranking methods on the TotalSegmentator. Quality Sentinel outperforms all alternatives. It also significantly reduces quality estimation costs (6 times less time, 60 times less RAM, and 20,000 times less disk space compared to MC dropout) by employing a 2D model that evaluates only the output mask slices instead of extensive 3D computation.
 
-<img src="./figs/semi-supervised_learning.png" width = "800" height = "160" alt="Semi-Supervised Learning" align=center />
+<img src="./figs/semi-supervised_learning.png" width = "800" height = "150" alt="Semi-Supervised Learning" align=center />
 
 ### 5. Environment
 
@@ -117,8 +117,18 @@ The code is developed with Intel Xeon Gold 5218R CPU@2.10GHz and 8 Nvidia Quadro
 
 The install script requirements.txt has been tested on an Ubuntu 20.04 system.
 
+## Citation
 
+If you find the benchmark method and results useful in your research, please consider citing:
 
+```
+@article{chen2024quality,
+title={Quality Sentinel: Estimating Label Quality and Errors in Medical Segmentation Datasets},
+author={Chen, Yixiong and Zhou, Zongwei and Yuille, Alan},
+journal={arXiv preprint arXiv:2406.00327},
+year={2024}
+}
+```
 
 
 
