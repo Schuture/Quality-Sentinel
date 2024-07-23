@@ -1,5 +1,9 @@
 # Quality-Sentinel
-This is the repository of Quality Sentinel, a label (mask) quality evaluation tool for medical image segmentation, implemented with PyTorch.
+This is the repository of Quality Sentinel, a label (mask) quality evaluation tool for medical image segmentation, implemented with PyTorch. 
+- Below shows labels with lower (left) and higher (right) predicted DSC in AbdomenAtlas dataset. 
+- This model helps to diagnose the data quality in a large-scale CT image segmentation dataset.
+
+![Illustration of Mask Quality Analysis on AbdomenAtlas](./figs/1721716857638.jpg)
 
 ### 1. Brief Introduction of this method
 
