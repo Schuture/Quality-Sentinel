@@ -28,7 +28,7 @@ Both the training and testing data are drawn from the DAP Atlas dataset featurin
 
 ### 3. Quick Start
 
-The Quality Sentinel dataset and the trained model are shared in ([Google Drive](https://drive.google.com/drive/folders/1bMDSVSDB3Qv-6IhMaFloVdXZ52QP2V9X?usp=sharing)). After downloading the zipped dataset, unzip it to this directory directly.
+The Quality Sentinel dataset and the trained model are shared in ([Google Drive](https://drive.google.com/drive/folders/1KIenyE_OQ8rixHXPhscVPvK9sRrvpXwz?usp=sharing)). After downloading the zipped dataset, unzip it to this directory directly.
 
 #### 3.1 Train the model
 
